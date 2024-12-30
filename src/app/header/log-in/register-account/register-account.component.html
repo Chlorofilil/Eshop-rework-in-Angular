@@ -1,0 +1,135 @@
+<div class="regform-container">
+    <h1>Create Accont</h1>
+    <span>We were pleased to meet you!</span>
+    <form #registerForm="ngForm" (ngSubmit)="onSubmit()" novalidate>
+
+
+        <!-- ABOUT YOU -->
+         <div class="user-info">
+            <div class="gender-row">
+                <label class="man">
+                    <input type="radio" #gender="ngModel" required="" [(ngModel)]="formData.genderValue" name="gender"  value="Man">
+                    <span>Man</span>
+                </label>
+
+
+                <label class="woman">
+                    <input type="radio" #gender="ngModel" required="" [(ngModel)]="formData.genderValue" name="gender"  value="Woman">
+                    <span>Woman</span>
+                </label>
+
+                <label class="company">
+                    <input type="radio" #gender="ngModel" required="" [(ngModel)]="formData.genderValue" name="gender"  value="Company">
+                    <span>Company</span>
+                </label>
+
+                <div *ngIf=" gender.touched && !gender.valid">
+                    <app-required-message></app-required-message>
+                </div>
+            </div>
+         </div>
+
+         <span>Your name</span>
+
+         <!-- USER  NAME -->
+         <div class="name-container" >
+            <div class="name-input-container">
+                <input  type="text" placeholder="First name" [(ngModel)]="formData.userName" name="username" #username="ngModel" required
+                [ngClass]="{'error-border': username.touched && !username.valid}">
+                <div *ngIf="username.touched && !username.valid">
+                    <app-required-message></app-required-message>
+                </div>
+            </div>
+
+            <div class="name-input-container">
+                <input type="text" placeholder="Last name" [(ngModel)]="formData.lastName" name="lastname"
+                #lastname="ngModel" required
+                [ngClass]="{'error-border': lastname.touched && !lastname.valid}">
+                <div *ngIf="lastname.touched && !lastname.valid">
+                    <app-required-message></app-required-message>
+                </div>
+            </div>
+         </div>
+
+         <span>Your access to your EMP account:</span>
+
+         <!-- USER EMAIL -->
+          <div class="email-contaier">
+            <div class="email">
+                <input type="email" placeholder="E-mail" [(ngModel)]="formData.email" name="email" #useremail="ngModel" required
+                [ngClass]="{'error-border' : useremail.touched && !useremail.valid}">
+                <div *ngIf="useremail.touched && !useremail.valid">
+                    <app-required-message></app-required-message>
+                </div>
+
+            </div>
+            <div class="control-email">
+                <input type="email" placeholder="Confirm E-mail" [(ngModel)]="emailControl" name="emailcontrol" #controlEmail="ngModel" required
+                [ngClass]="{'error-border' : controlEmail.touched && !controlEmail.valid}">
+                <div *ngIf="controlEmail.touched && !controlEmail.valid">
+                    <app-required-message></app-required-message>
+                </div>
+
+            </div>
+
+          </div>
+
+          <!-- NEWSLETTER -->
+          <div class="newsletter">
+            <label class="news-check">
+                <input type="checkbox" [(ngModel)]="formData.isChecked" name="selectednews">
+                <span *ngIf="isChecked">I will not receive promotional E-mails from EMP.</span>
+                <span *ngIf="!isChecked">I do not wish to receive promotional E-mails from EMP.</span>
+              </label>
+              <label class="arrow-down">
+                <input type="checkbox" class="newsletter-info" [(ngModel)]="formData.newsInfo" name="showsubscribeinfo">
+                <img src="../../../../assets/photos/arrow-down.png" alt="arrow-down">
+              </label>
+          </div>
+          <span *ngIf="newsInfo" class="additiona-info">We will send product and service recommendations to your email address based on your previous purchases from us.</span>
+
+          <!-- USER BIRTHDAY -->
+          <div class="birthday-container">
+            <span>Your date of birth </span>
+            <span class="optional-text">(optional)</span>
+            <div class="birthday-selector">
+                <select name="day" [(ngModel)]="formData.selectedDay">
+                    <option value="">Day</option>
+                    <option *ngFor="let day of days" [value]="day">{{ day }}</option>
+                </select>
+
+                <select name="month" [(ngModel)]="formData.selectedMonth">
+                    <option value="">Month</option>
+                    <option *ngFor="let month of months" [value]="month">{{ month }}</option>
+                </select>
+
+                <select name="year" [(ngModel)]="formData.selectedYear">
+                    <option value="">Year</option>
+                    <option *ngFor="let year of years" [value]="year">{{ year }}</option>
+                </select>
+            </div>
+          </div>    
+          
+          <!-- TELEFON -->
+           <div class="tel-container">
+                <input type="tel" placeholder="Telephone (optional)" [(ngModel)]="formData.telephone" name="telephone">
+                <input type="tel" placeholder="Mobile phone number (optional)" [(ngModel)]="formData.mobilTelephone" name="mobile-telephone">
+           </div>
+
+           <div class="business-conditions">
+            I agree with the 
+            <a href="/on/demandware.store/Sites-GLB-Site/sk_SK/Raffle-ShowCondition?contentId=terms-privacy-policy">Terms and Conditions</a> 
+            and the 
+            <a href="/on/demandware.store/Sites-GLB-Site/sk_SK/Raffle-ShowCondition?contentId=terms">Privacy Policy</a>
+           </div>
+
+            <!-- SUBMIT -->
+            <button type="submit" class="submit-btn">Continue</button>
+
+            <!-- BACKBUTN -->
+            <div class="back-to-login">
+                <a routerLink="/logIn">Back to Login</a>
+            </div>
+    </form>
+</div>
+

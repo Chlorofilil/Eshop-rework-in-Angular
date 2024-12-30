@@ -1,0 +1,14 @@
+<div class="rowStyle rowOneColor">
+    <div [ngClass]="{ 'hiddenMenu': isLogInActive }" class="leftMenu">
+        <a routerLink="/all" routerLinkActive="active">All</a>
+        <a routerLink="/woman" routerLinkActive="active">Woman</a>
+        <a routerLink="/man" routerLinkActive="active">Man</a>
+        <a routerLink="/child" routerLinkActive="active">Child</a>
+    </div>
+    <div class="logomid" routerLink="/all">
+        <img src="assets/photos/logo.png" alt="Logo">
+    </div>
+    <div [ngClass]="{ 'hiddenMenu': isLogInActive }" class="rightmenu">
+        <a routerLink="/logIn"  id="logIn">Log in</a>
+    </div>
+</div>

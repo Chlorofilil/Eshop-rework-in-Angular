@@ -1,0 +1,6 @@
+#main-container {
+    width: 100%; 
+    max-width: 1400px; 
+    margin: 30px auto; 
+    box-sizing: border-box;
+}

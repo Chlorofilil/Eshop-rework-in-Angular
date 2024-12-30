@@ -1,0 +1,144 @@
+.login-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    max-width: 500px;
+    margin: 0 auto;
+    padding: 60px 0;
+}
+  
+.login-container h2 {
+    margin-top: 5px;
+    margin-bottom: 25px;
+}
+  
+.login-inputs {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.input-container {
+    border: 1px solid black;
+    border-radius: 5px;
+    display: flex;
+    align-items: center;
+    width: 350px;
+    height: 35px;
+    overflow: hidden;
+    outline: none; 
+}
+
+.text-in-line {
+    padding-left: 10px;
+}
+
+.input-container input {
+    flex: 1;
+    border: none;
+    padding-left: 10px;
+    height: 100%; 
+    box-sizing: border-box;
+}
+
+.password-input {
+    padding-left: 10px;
+}
+
+.toggle-password-btn {
+    padding-right: 10px;
+    border: none;
+    background: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+}
+
+.toggle-password-btn img {
+    width: 25px; 
+    height: 25px;
+}
+
+.btn {
+    margin-top: 10px;
+    margin-bottom: 25px;
+    cursor: pointer;
+    height: 40px;
+    border-radius: 2px;
+}
+
+.login-btn {
+    border: 1px solid #003c00;
+    background: #006d1c;
+    color: white;
+    padding: 8.5px 17px;
+    font-family: open_sansregular, Arial, Helvetica, sans-serif;
+    width: 300px;
+}
+
+.login-btn:hover  {
+    background-color: #003c00;
+}
+
+.diver {
+    display: flex;
+    align-items: center;
+    text-align: center;
+    width: 100%;
+}
+
+.diver::before,
+.diver::after {
+    content: "";
+    flex: 1;
+    height: 1px;
+    background-color: black;
+    margin: 0 10px;
+}
+
+/** ALTERNATIVE LOGIN **/
+.alternative-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.alternative-btn {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 210px;
+    cursor: pointer;
+    background-color: white;
+}
+
+.google-btn {
+    border: 1px solid black;
+}
+
+.facebook-btn{
+    border: 1px solid #1877F2;
+    color: #1877F2;
+}
+
+.img-left {
+    position: absolute;
+    left: 5px;
+}
+
+.send-register {
+    width: 210px;
+    background-color: rgb(44, 41, 42);
+    border: none;
+    color: white;
+}
+
+.send-register:hover{
+    background-color: black;
+}
+

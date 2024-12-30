@@ -1,0 +1,9 @@
+.img-size {
+    width: 1400px;
+    height: 600px;
+    margin: 20px 0;
+}
+
+.carousel-indicators li::marker {
+    content: ''; 
+}

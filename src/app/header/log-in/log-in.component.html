@@ -1,0 +1,41 @@
+<div class="login-container">
+    <h2 >
+        <span>Log in to your EMP account</span>
+    </h2>
+    <!-- EMAIL  LOGIN -->
+    <div class="login-inputs">
+        <!-- ENTER EMAIL LOGIN -->
+        <input type="email" placeholder="Your email address" class="input-container text-in-line">
+
+        <!-- LOGIN PASSWORD -->
+        <div class="input-container">
+
+            <input [type]="passwordType" placeholder="Your password" class="password-input">
+
+            <button type="button" (click)="togglePasswordVisibility()" class="toggle-password-btn">
+                <img [src]="passwordType === 'password' ? '../../../assets/photos/eye_hidden.png' : '../../../assets/photos/eye_open.png' " alt="toggle password visibility">
+            </button>
+          </div>
+    </div>
+
+    <button class="login-btn btn">Log in with your email</button>
+
+    <h2 class="diver">
+        <span>Or</span>
+    </h2>
+
+    <!-- ALTERNATIVE LOGIN -->
+    <div class="alternative-container">
+        <button class="alternative-btn btn google-btn">
+            <img src="../../../assets/photos/google.png" alt="google" class="img-left">
+            <span>Sign in with google</span>
+        </button>
+        <button class="alternative-btn btn facebook-btn">
+            <img src="../../../assets/photos/facebook.png" alt="facebook" class="img-left">
+            <span>Sign in with google</span>
+        </button>
+    </div>
+
+    <!-- REGISTRATION -->
+    <button routerLink="/registerAccount" class="send-register btn">Create new account</button>
+</div>

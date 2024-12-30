@@ -1,0 +1,19 @@
+.cards-container {
+    display: flex;
+    justify-content: space-around;
+    margin: 20px 0;
+}
+
+.card-img-top {
+    width: 286px;
+    height: 180px;
+}
+
+.btn-color {
+    background-color: black;
+    border: rgb(44, 41, 42);
+}
+
+.btn-color:hover{
+    background-color: rgb(44, 41, 42);
+}
