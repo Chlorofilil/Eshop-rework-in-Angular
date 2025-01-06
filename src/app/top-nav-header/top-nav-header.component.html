@@ -1,0 +1,31 @@
+<div class="header-container row-one-header">
+    <div *ngFor="let item of mainCategory" class="gap-menu">
+        <a  (click)="setActiveCategory(item.label)"
+            [routerLink]="item.routelink"
+            routerLinkActive="active"
+            [routerLinkActiveOptions]="{ exact: true }"
+        >
+        {{ item.label }}
+        </a>
+    </div>
+    <div class="logomid" routerLink="/all">
+        <img src="../../assets/photos/Logo/logo.png" alt="Logo">
+    </div>
+    <div [ngClass]="{ 'hiddenMenu': isLogInActive }" class="rightmenu">
+        <a routerLink="logIn"  id="logIn">Log in</a>
+    </div>
+</div>
+<div class="header-container" [ngClass]="{'search-bar-down' : isSmallScreen}">
+    <div *ngFor="let item of mainCategory">
+      <div  *ngIf="activeCategory === item.label" class="row-two-header"
+            [ngClass]="{'lower-size': isMediumScreen && (item.label === 'Man' || item.label === 'Woman')}"
+        >
+            <a  *ngFor="let schoosenSubCategory of item.subcategories" [routerLink]="schoosenSubCategory.routelink">
+                {{ schoosenSubCategory.label }} 
+            </a>
+      </div>
+    </div>
+    <div class="search-bar">
+      <app-searchbar></app-searchbar>
+    </div>
+</div>

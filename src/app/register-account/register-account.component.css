@@ -1,0 +1,169 @@
+.regform-container {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    max-width: 500px;
+    margin: 0 auto;
+    font-size: 1rem;
+}
+
+.user-info {
+    padding-top: 2rem;
+    padding-bottom: 1rem;
+
+}
+
+.gender-row input {
+    margin-right: 0.188rem;
+}
+
+.gender-row span {
+    padding-right: 2rem;
+}
+
+.name-container {
+    padding-top: 0.5rem;
+    padding-bottom: 1rem;
+    display: flex;
+    justify-content: space-between;
+}
+
+.name-input-container {
+    width: 200px;
+}
+
+.name-input-container input {
+    overflow: hidden;
+    outline: none; 
+    padding: 0.5rem;
+}
+
+.big-input {
+    padding-top: 0.5rem;
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    padding-bottom: 1rem;
+}
+
+.big-input input {
+    flex: 1;
+    padding: 0.5rem;
+    width: 100%;
+    box-sizing: border-box;
+    overflow: hidden;
+    outline: none;
+}
+
+.newsletter {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+}
+
+.news-check {
+    flex-shrink: 1;
+}
+
+.news-check input {
+    margin-right: 0.188rem;
+}
+
+.newsletter-info {
+    display: none;
+}
+
+.arrow-down {
+    flex-shrink: 0;
+    height: 20px;
+    width: 20px;
+    object-fit: cover;
+}
+
+.additiona-info {
+    font-size: 1rem;
+}
+
+.optional-text {
+    color: #666;
+}
+
+.birthday-container {
+    padding-top: 1rem;
+}
+
+.birthday-container select{
+    cursor: pointer;
+}
+
+.birthday-selector select {
+    margin-top: 0.5rem;
+    background-color: white;
+    border: 0.063rem solid black;
+    padding: 0.313rem;
+    margin-right: 1rem;
+}
+
+.tel-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-top: 1rem;
+}
+
+.tel-container input{
+    width: 230px;
+    height: 40px;
+    padding: 0.313rem;
+    overflow: hidden;
+    outline: none;
+}
+
+.business-conditions {
+    padding-top: 1rem;
+}
+
+.business-conditions a {
+    color: inherit;
+}
+
+.business-conditions a:hover {
+    text-decoration:  none
+}
+
+.submit-btn{
+    margin-top: 0.5rem;
+    width: 300px;
+    height: 40px;
+    border: 0.063rem solid #003c00;
+    background: #006d1c;
+    color: white;
+    border: 0.063rem solid black;
+    border-radius: 0.313rem;
+}
+
+.submit-btn:hover {
+    background-color: #003c00;
+}
+
+.back-to-login {
+    margin-top: 0.5rem;
+}
+
+.back-to-login a {
+    color: inherit;
+}
+
+.back-to-login a:hover {
+    text-decoration:  none
+}
+
+.error-border {
+    border: 0.063rem solid red;
+}
+
+.error-message {
+    color: red;
+    font-size: 1rem;
+}

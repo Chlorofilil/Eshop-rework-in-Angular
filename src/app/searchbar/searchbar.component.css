@@ -1,0 +1,42 @@
+#search-bar-container {
+    border: 1px solid black;
+    border-radius: 2.5px;
+    display: flex;
+    align-items: center;
+    width: 100%;
+  }
+  
+  .search-input {
+    border: none;
+    padding: 8px;
+    font-size: 16px;
+    outline: none;
+    flex: 1; 
+    transition: width 0.3s ease; /* Prechod na šírku */
+  }
+  
+  .search-input.focused {
+    width: calc(100% + 20px); /* Zvýši šírku o 20px pri focus */
+  }
+  
+  .clear-btn {
+    order: 1; 
+  }
+  
+  .search-btn {
+    order: 2; 
+  }
+  
+  .Btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 5px;
+    border: none;
+    background-color: white;
+  }
+  
+  .icon {
+    width: 20px;
+    height: 20px;
+  }
